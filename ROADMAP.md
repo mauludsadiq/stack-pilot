@@ -103,12 +103,12 @@ Five or more institutions. Real claim spaces. Real disputes.
    - Cross-institution capability verification
    - Deliverable: locked mesh where unauthorized publish returns 403
 
-### 2.6 Raqib Continuous Loop
+### 2.6 Raqib Continuous Loop -- COMPLETE
 
-   - Raqib runs as a persistent service, not a one-shot script
-   - Polls feed every N seconds
-   - Updates stances, witnesses, challenges autonomously
-   - Deliverable: agent runs 7 days without operator intervention
+   MIT-Raqib-Agent ran 3 steps against live mesh
+   Observed Oxford claim, deliberated, witnessed autonomously
+   steps_run=3 total_observed=1 total_acted=1 witnessed_count=1
+   agent_loop.fard + run_agent.fard
 
 ---
 
