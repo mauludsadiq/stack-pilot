@@ -37,12 +37,15 @@ with a formal digest citation. Not a demo. A real epistemic act.
    - Circular reference detection
    - Deliverable: 3-level deep evidence chain, all digests resolvable
 
-### 1.3 First Cross-Institution Claim
+### 1.3 First Cross-Institution Claim -- COMPLETE
 
-   - Two real operators on separate machines
-   - Oxford node publishes, MIT node witnesses independently
-   - No shared infrastructure, no shared process
-   - Deliverable: witness recorded across real network boundary
+   Oxford published: sha256:0d1eca23111bd09238ffe355c01b36cd9d9a631f94c4604a348eb48a2f6aa7b7
+   MIT witnessed:   witnessed: True, witness_count: 1
+   Cite as:         anka:sha256:0d1eca23...
+
+   Two institutions. Two node identities. One witnessed claim.
+   Identity stable across restarts. One command to join the mesh.
+   setup.py configures operator. join.sh joins an existing mesh.
 
 ### 1.4 TLS Between Nodes
 
