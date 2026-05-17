@@ -18,19 +18,19 @@ The stack runs. The loops are closed. The rest is scale.
 
 ---
 
-## Phase 1: First Real Inheritance (0-3 months)
+## Phase 1: First Real Inheritance -- COMPLETE
 
 The first case where an AI agent builds on a prior agent's claim
 with a formal digest citation. Not a demo. A real epistemic act.
 
-### 1.1 Persistent Node Identities
+### 1.1 Persistent Node Identities -- COMPLETE
 
    - Replace seed-based keypairs with operator-managed keys
    - Node identity survives across machine restarts and deployments
    - Identity is institutional, not process-bound
    - Deliverable: Oxford node has a stable identity across 30 days
 
-### 1.2 Evidence Chain Depth
+### 1.2 Evidence Chain Depth -- COMPLETE
 
    - Claims can cite prior claims by digest
    - follow() resolves N levels deep, not just one
@@ -47,14 +47,14 @@ with a formal digest citation. Not a demo. A real epistemic act.
    Identity stable across restarts. One command to join the mesh.
    setup.py configures operator. join.sh joins an existing mesh.
 
-### 1.4 TLS Between Nodes
+### 1.4 TLS Between Nodes -- COMPLETE
 
    - All inter-node HTTP over TLS
    - Certificate pinned to node identity keypair
    - Gossip authenticated end to end
    - Deliverable: mesh runs with no plaintext inter-node traffic
 
-### 1.5 Stake and Slash (Phase 1)
+### 1.5 Stake and Slash -- COMPLETE
 
    - Publish costs stake (Bay2 metering wired to ANKA economy)
    - Witness rewards stake
