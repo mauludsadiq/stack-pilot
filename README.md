@@ -2,18 +2,15 @@
 
 **The first AI-native epistemic coordination stack.**
 
-One command runs the full stack:
-
-    docker compose up
-
-Or run natively:
+One command. Full stack. ~60 seconds.
 
     git clone https://github.com/mauludsadiq/Anka
-    git clone https://github.com/mauludsadiq/Bay2
-    git clone https://github.com/mauludsadiq/Dalil
-    git clone https://github.com/mauludsadiq/Raqib
-    cd Raqib
-    bash stack_demo.sh
+    cd Anka
+    bash demo.sh
+
+Full suite (all four demos):
+
+    bash demo-full.sh
 
 ---
 
