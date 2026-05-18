@@ -71,6 +71,18 @@ Run it:
 
     python3 anka/demos/accident_flow.py          # hybrid: mock + live CPI
     python3 anka/demos/accident_flow_dynamic.py  # dynamic: agents discovered from mesh
+    python3 anka/demos/accident_followup.py       # multi-turn: mesh is the memory
+
+The dynamic demo adds Option B — agent discovery.
+The follow-up demo adds multi-turn continuity:
+
+    Turn 1: "I was in a car accident" -> 3 institutions coordinated
+    Turn 2: "What is the status of my claim?" -> answered from mesh
+    Turn 3: "Can I move the repair to Friday?" -> rescheduled, recorded
+
+    The user returned the next day.
+    Different session. Same mesh. Full continuity.
+    The mesh is the memory.
 
 The dynamic demo adds Option B — agent discovery:
     Agents register capabilities as signed claims in the ANKA mesh.
