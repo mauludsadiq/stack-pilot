@@ -46,7 +46,10 @@ What ANKA does:
     Step 1: City PD     Police report filed. Officer Rodriguez assigned.
                         Incident documented at Main St & 5th Ave.
 
-    Step 2: State Farm  Claim approved. Payout $2,847 (net $2,347 after deductible).
+    Step 2: State Farm  Claim approved.
+                        Base cost $2,200 (2020 USD) x 1.1507 inflation factor
+                        = $2,531.51 payout (net $2,031.51 after deductible).
+                        Inflation: 2.95% US CPI, World Bank 2024 (live).
                         Adjuster Sarah Chen assigned, contact within 24 hours.
 
     Step 3: City Auto   Repair booked Thursday May 21 at 10:00 AM. Estimate $2,350.
@@ -60,6 +63,9 @@ institutions, with complete auditability.
 
 No form-filling. No contradictory bots. No lost paperwork.
 Just a capable AI acting as your verified institutional agent.
+
+The accident demo is now hybrid — mock institutions, live economic data.
+The payout is calculated using real US CPI from the World Bank API at runtime.
 
 Run it:
 
