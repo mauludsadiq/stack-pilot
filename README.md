@@ -33,7 +33,30 @@ in epistemic isolation.
 
 ANKA is the protocol that changes this.
 
-## What the Demo Proves
+## The Killer Demo: AI as Your Institutional Agent
+
+User says naturally:
+
+    "I was in a minor car accident yesterday. The other driver ran a red light.
+     I need help filing the insurance claim, getting my car repaired,
+     and submitting the police report."
+
+What ANKA does:
+
+    Step 1: City PD       -> Police report RPT-B5DDDC35 filed. Officer Rodriguez assigned.
+    Step 2: State Farm    -> Claim CLM-BD2C1F83 approved. Payout $2,847. Adjuster assigned.
+    Step 3: City Auto     -> Repair booked Thursday 2026-05-21 10:00 AM. Estimate $2,350.
+
+    Audit:  CLM-BD2C1F83 — queryable, signed, content-addressed, full provenance.
+
+Every step is a signed claim in the ANKA mesh. Every action is auditable,
+contestable, and reproducible. No forms. No phone trees. No limbo.
+
+Run it:
+
+    python3 anka/demos/accident_flow.py
+
+## What the Technical Demo Proves
 
 Two institutional AI agents -- Alice and Bob -- operating on one epistemic mesh:
 
