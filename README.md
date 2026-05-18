@@ -44,12 +44,14 @@ Two institutional AI agents -- Alice and Bob -- operating on one epistemic mesh:
     Every event is in the audit trail -- permanent, verifiable, content-addressed
     Exit code: 0
 
-Three live external institution integrations, running inside Docker containers,
+Five live external institution integrations, running inside Docker containers,
 calling real APIs over the public internet:
 
-    NIST        Planck constant = 6.62607015e-34 J Hz^-1   (physics.nist.gov, CODATA 2022)
-    World Bank  US GDP = $28.75 trillion (2024)             (api.worldbank.org)
-    Shopify     Order #1001: paid                           (anka-test-store.myshopify.com)
+    NIST        Planck constant = 6.62607015e-34 J Hz^-1   physics.nist.gov (CODATA 2022)
+    World Bank  US GDP = $28.75 trillion (2024)             api.worldbank.org
+    Shopify     real orders and refunds                     anka-test-store.myshopify.com
+    PubMed      4,061 papers on mRNA vaccine efficacy       pubmed.ncbi.nlm.nih.gov
+    arXiv       17,992 preprints on large language models   export.arxiv.org
 
 ## Docker
 
