@@ -43,14 +43,23 @@ User says naturally:
 
 What ANKA does:
 
-    Step 1: City PD       -> Police report RPT-B5DDDC35 filed. Officer Rodriguez assigned.
-    Step 2: State Farm    -> Claim CLM-BD2C1F83 approved. Payout $2,847. Adjuster assigned.
-    Step 3: City Auto     -> Repair booked Thursday 2026-05-21 10:00 AM. Estimate $2,350.
+    Step 1: City PD     Police report filed. Officer Rodriguez assigned.
+                        Incident documented at Main St & 5th Ave.
 
-    Audit:  CLM-BD2C1F83 — queryable, signed, content-addressed, full provenance.
+    Step 2: State Farm  Claim approved. Payout $2,847 (net $2,347 after deductible).
+                        Adjuster Sarah Chen assigned, contact within 24 hours.
 
-Every step is a signed claim in the ANKA mesh. Every action is auditable,
-contestable, and reproducible. No forms. No phone trees. No limbo.
+    Step 3: City Auto   Repair booked Thursday May 21 at 10:00 AM. Estimate $2,350.
+                        Insurance billed directly. Loaner car available.
+
+    Audit:  Every action signed, content-addressed, and permanently recorded
+            in the ANKA mesh with full provenance and lineage.
+
+From chaos to resolution — in one natural conversation, across three separate
+institutions, with complete auditability.
+
+No form-filling. No contradictory bots. No lost paperwork.
+Just a capable AI acting as your verified institutional agent.
 
 Run it:
 
