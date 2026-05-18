@@ -90,3 +90,7 @@ content-addressed. Every operation is replayable.
     DEMO_TRANSCRIPT.md       Clean stack_demo.sh output with explanations
     SECURITY_MODEL.md        Signatures, capabilities, replay, audit, threat model
     EVALUATION_CHECKLIST.md  Step-by-step verification for technical evaluators
+
+# License
+
+MUI
