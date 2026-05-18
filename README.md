@@ -139,9 +139,9 @@ No credentials required for NIST or World Bank.
     https://github.com/mauludsadiq/Anka     13,590 lines   152 files
     https://github.com/mauludsadiq/Bay2      2,825 lines    25 files
     https://github.com/mauludsadiq/Raqib     1,071 lines    10 files
-    https://github.com/mauludsadiq/Dalil       688 lines     4 files
+    https://github.com/mauludsadiq/Dalil       798 lines     4 files
 
-    Total: 18,174 lines of Fard across 191 files
+    Total: 18,284 lines of Fard across 191 files
 
 ## The Analogy
 
