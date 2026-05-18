@@ -69,7 +69,13 @@ The payout is calculated using real US CPI from the World Bank API at runtime.
 
 Run it:
 
-    python3 anka/demos/accident_flow.py
+    python3 anka/demos/accident_flow.py          # hybrid: mock + live CPI
+    python3 anka/demos/accident_flow_dynamic.py  # dynamic: agents discovered from mesh
+
+The dynamic demo adds Option B — agent discovery:
+    Agents register capabilities as signed claims in the ANKA mesh.
+    Dalil /discover/{capability} returns the highest-scored agent.
+    Any agent can register. The mesh routes to the best one.
 
 ## The Functional Demo: Research Publication Verification
 
