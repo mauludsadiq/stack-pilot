@@ -113,6 +113,19 @@ Every citation is content-addressed and reproducible.
 Run it:
 
     python3 anka/demos/research_verification_flow.py
+    python3 anka/demos/clinical_trial_flow.py
+
+The clinical trial demo generates an FDA-auditable epistemic trail:
+
+    Trial ID: TRIAL-MRNA-*
+
+    1. PubMed     444 papers on mRNA vaccine efficacy       anka:sha256:99e906...
+    2. arXiv      312 preprints on protein folding          anka:sha256:08847b...
+    3. NIST       Boltzmann + Avogadro constants (CODATA 2022) anka:sha256:c47957...
+    4. World Bank life expectancy 73.48yr, population 8.14B   anka:sha256:64209d...
+
+    Every dosage decision traceable to source paper or constant.
+    Cannot be altered. Verifiable by any node. Queryable by any auditor.
 
 ## What the Technical Demo Proves
 
