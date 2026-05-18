@@ -65,6 +65,34 @@ Run it:
 
     python3 anka/demos/accident_flow.py
 
+## The Functional Demo: Research Publication Verification
+
+100% real. No mocks. Every API call is live.
+
+User says:
+
+    "I'm publishing a paper on climate sensitivity.
+     Help me verify my key claims and find related work."
+
+What ANKA does — four real institutions, one session:
+
+    arXiv:      26 preprints on climate sensitivity     export.arxiv.org
+    PubMed:     24,665 peer-reviewed papers             pubmed.ncbi.nlm.nih.gov
+    NIST:       Stefan-Boltzmann = 5.67e-8 W m^-2 K^-4 physics.nist.gov (CODATA 2022)
+    World Bank: Global GDP = $110.98 trillion (2024)    api.worldbank.org
+
+Every data point is live. Every claim is signed.
+Every citation is content-addressed and reproducible.
+
+    arXiv search    anka:sha256:059ec13a...
+    PubMed search   anka:sha256:3cd58665...
+    NIST constants  anka:sha256:43c3c497...
+    World Bank data anka:sha256:e4a6e4d9...
+
+Run it:
+
+    python3 anka/demos/research_verification_flow.py
+
 ## What the Technical Demo Proves
 
 Two institutional AI agents -- Alice and Bob -- operating on one epistemic mesh:
