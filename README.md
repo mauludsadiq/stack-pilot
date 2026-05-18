@@ -2,25 +2,27 @@
 
 **The first AI-native epistemic coordination stack.**
 
-One command proves all four layers:
+One command runs the full stack:
 
-   git clone https://github.com/mauludsadiq/Raqib
-   git clone https://github.com/mauludsadiq/Anka
-   git clone https://github.com/mauludsadiq/Bay2
-   git clone https://github.com/mauludsadiq/Dalil
-   cd Raqib
-   bash stack_demo.sh
+    docker compose up
 
-Expected output: 12 verified steps. All layers green.
+Or run natively:
+
+    git clone https://github.com/mauludsadiq/Anka
+    git clone https://github.com/mauludsadiq/Bay2
+    git clone https://github.com/mauludsadiq/Dalil
+    git clone https://github.com/mauludsadiq/Raqib
+    cd Raqib
+    bash stack_demo.sh
 
 ---
 
 ## The Stack
 
-   Bay2    operational substrate     object storage, streams, replay, metering
-   ANKA    epistemic coordination    claims, witnesses, collapse, audit
-   Dalil   AI-native browser         browse, read, trail, follow, compose
-   Raqib   autonomous agent runtime  identity, memory, observe, deliberate, act
+    Bay2    operational substrate     object storage, streams, replay, metering
+    ANKA    epistemic coordination    claims, witnesses, collapse, audit
+    Dalil   AI-native browser         browse, read, trail, follow, compose
+    Raqib   autonomous agent runtime  identity, memory, observe, deliberate, act
 
 ## The Problem
 
@@ -33,43 +35,58 @@ ANKA is the protocol that changes this.
 
 ## What the Demo Proves
 
-Two institutional AI agents -- Oxford and MIT -- operating on one epistemic mesh:
+Two institutional AI agents -- Alice and Bob -- operating on one epistemic mesh:
 
-   Oxford publishes a climate finding (3.2C)
-   MIT publishes a competing finding (3.4C)
-   Both survive -- interpretive space, no central arbiter
-   The mesh converges via signed gossip -- no coordinator
-   A Raqib agent witnesses the Oxford claim (unseen -> witnessed)
-   A computation result is written to Bay2 as an executable receipt
-   Policy collapse returns the highest-scored claim with full provenance
-   Oxford node stops and restarts -- both claims remain recoverable
-   Every event is in the audit trail -- permanent, verifiable, content-addressed
+    Alice publishes a climate finding (3.2C per doubling of CO2)
+    Bob independently replicates it
+    Bob witnesses Alice's claim -- score goes from 0 to 2
+    The mesh converges via signed gossip -- no coordinator
+    Every event is in the audit trail -- permanent, verifiable, content-addressed
+    Exit code: 0
 
-## Documents
+Three live external institution integrations, running inside Docker containers,
+calling real APIs over the public internet:
 
-   PILOT.md                 1-page institutional pitch
-   RUNBOOK.md               Exact deployment and recovery instructions
-   DEMO_TRANSCRIPT.md       Clean stack_demo.sh output with explanations
-   ARCHITECTURE.md          Bay2 -> ANKA -> Dalil -> Raqib, full technical detail
-   SECURITY_MODEL.md        Signatures, capabilities, replay, audit, threat model
-   EVALUATION_CHECKLIST.md  Step-by-step verification for technical evaluators
+    NIST        Planck constant = 6.62607015e-34 J Hz^-1   (physics.nist.gov, CODATA 2022)
+    World Bank  US GDP = $28.75 trillion (2024)             (api.worldbank.org)
+    Shopify     Order #1001: paid                           (anka-test-store.myshopify.com)
+
+## Docker
+
+    docker compose up
+
+Services: origin, alice, bob, adapter (Python), demo.
+The demo container runs the full epistemic mesh proof followed by live
+institution integrations. All containers on the same private network.
+No credentials required for NIST or World Bank.
 
 ## Repositories
 
-   https://github.com/mauludsadiq/Bay2     120 tests   1,316 lines
-   https://github.com/mauludsadiq/Anka     301 tests   5,324 lines
-   https://github.com/mauludsadiq/Dalil     16 tests
-   https://github.com/mauludsadiq/Raqib     17 tests + stack demo
+    https://github.com/mauludsadiq/Anka     13,590 lines   152 files
+    https://github.com/mauludsadiq/Bay2      2,825 lines    25 files
+    https://github.com/mauludsadiq/Raqib     1,071 lines    10 files
+    https://github.com/mauludsadiq/Dalil       688 lines     4 files
+
+    Total: 18,174 lines of Fard across 191 files
 
 ## The Analogy
 
-   ARPANET was the protocol. The killer app was the Web.
-   The Web was the protocol. The killer app was Mosaic.
-   LLMs are the technology. The killer app was ChatGPT.
-   ANKA is the protocol. Dalil is the browser. Raqib is the agent.
+    ARPANET was the protocol. The killer app was the Web.
+    The Web was the protocol. The killer app was Mosaic.
+    LLMs are the technology. The killer app was ChatGPT.
+    ANKA is the protocol. Dalil is the browser. Raqib is the agent.
 
 ## Language
 
 Written in Fard -- a deterministic functional language for verifiable
 AI-operated systems. Every computation is reproducible. Every claim is
 content-addressed. Every operation is replayable.
+
+## Documents
+
+    PILOT.md                 1-page institutional pitch
+    ARCHITECTURE.md          Bay2 -> ANKA -> Dalil -> Raqib, full technical detail
+    RUNBOOK.md               Exact deployment and recovery instructions
+    DEMO_TRANSCRIPT.md       Clean stack_demo.sh output with explanations
+    SECURITY_MODEL.md        Signatures, capabilities, replay, audit, threat model
+    EVALUATION_CHECKLIST.md  Step-by-step verification for technical evaluators

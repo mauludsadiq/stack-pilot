@@ -5,7 +5,7 @@
 A working implementation of the first AI-native epistemic coordination stack.
 Four layers. Four repos. One command to prove all of them.
 
-    bash stack_demo.sh
+    docker compose up
 
 ## The Problem It Solves
 
@@ -26,17 +26,24 @@ verifiable, tamper-evident layer for coordinating claims about the world.
 
 ## What It Demonstrates
 
-Two institutional AI agents — Oxford and MIT — operating on one epistemic mesh:
+Epistemic mesh -- two nodes, one mesh, no coordinator:
 
-- Oxford publishes a climate sensitivity finding
-- MIT independently publishes a competing finding
-- Both claims survive — interpretive space, no central arbiter
-- The mesh converges via signed gossip — no coordinator
-- An autonomous Raqib agent observes the Oxford claim and witnesses it
-- A computation result is written directly to Bay2 as an executable claim
-- Policy collapse returns the highest-scored claim with full provenance
-- The Oxford node is stopped and restarted — both claims remain recoverable
-- Every event is in the audit trail — permanent, verifiable, content-addressed
+    Alice publishes: 3.2C per doubling of CO2
+    Bob independently replicates and witnesses
+    Score: 2 witnesses
+    Cite as: anka:sha256:939c3c...
+    9 events published, 9 witnessed
+    Mesh converged. Exit code: 0
+
+Live institution integrations -- real APIs, inside Docker containers:
+
+    NIST        Planck constant = 6.62607015e-34 J Hz^-1   physics.nist.gov
+    World Bank  US GDP = $28.75 trillion (2024)             api.worldbank.org
+    Shopify     real orders, real refunds                   Admin API
+
+The ANKA Interact Protocol (v1.0) defines how any institution exposes
+its AI to the mesh. Any company implements POST /interact. ANKA handles
+routing, sessions, and receipts.
 
 ## The Analogy
 
@@ -47,14 +54,16 @@ Two institutional AI agents — Oxford and MIT — operating on one epistemic me
 
 ## Repositories
 
-    https://github.com/mauludsadiq/Bay2    120 tests  1,316 lines
-    https://github.com/mauludsadiq/Anka    301 tests  5,324 lines
-    https://github.com/mauludsadiq/Dalil    16 tests
-    https://github.com/mauludsadiq/Raqib    17 tests + stack demo
+    https://github.com/mauludsadiq/Anka     13,590 lines   152 files
+    https://github.com/mauludsadiq/Bay2      2,825 lines    25 files
+    https://github.com/mauludsadiq/Raqib     1,071 lines    10 files
+    https://github.com/mauludsadiq/Dalil       688 lines     4 files
+
+    Total: 18,174 lines of Fard across 191 files
 
 ## Language
 
-Written in Fard — a deterministic functional language designed for
+Written in Fard -- a deterministic functional language designed for
 verifiable AI-operated systems. Every computation is reproducible.
 Every claim is content-addressed. Every operation is replayable.
 
