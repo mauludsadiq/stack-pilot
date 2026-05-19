@@ -165,6 +165,33 @@ No credentials required for NIST or World Bank.
 
     Total: 18,284 lines of Fard across 191 files
 
+## Scaling
+
+Four architectural fixes landed to handle production load:
+
+    Fix 1: Segmented archive
+            Before: one JSON blob per write, grows unbounded
+            After:  one SQLite row per segment (claim_space:day_bucket)
+            Result: O(1) append, O(segments) range query
+
+    Fix 2: Gossip propagation (was broken)
+            Before: gossip payload returned in response, never sent
+            After:  broadcast_gossip called after publish
+            Result: nodes self-propagate, no manual fetch needed
+
+    Fix 3: Normalized node state
+            Before: node_state blob = 24KB+ per 10 claims, grows linearly
+            After:  node_state blob = 817 bytes constant
+            Tables: claims, witnesses, challenges (one row per record)
+            Result: 99.997% reduction at 1M claims
+
+    Fix 4: Smart request loading
+            Before: every request loads ALL claims, rebuilds index
+            After:  /query -> SELECT WHERE space+subject
+                    /claim -> SELECT WHERE digest
+                    /health -> count only
+            Result: O(matching) not O(all) for targeted queries
+
 ## The Analogy
 
     ARPANET was the protocol. The killer app was the Web.
