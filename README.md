@@ -199,6 +199,13 @@ Four architectural fixes landed to handle production load:
             Result: O(interested_peers) not O(all_peers)
             Verified: economic claim delivered, research claim filtered
 
+    Fix 6: Connection pooling
+            Before: each gossip push spawns a curl subprocess
+                    1K peers = 1K processes per publish
+            After:  http.post from std/http stdlib
+                    persistent connections, no subprocess overhead
+                    connection refused handled cleanly
+
 ## The Analogy
 
     ARPANET was the protocol. The killer app was the Web.
