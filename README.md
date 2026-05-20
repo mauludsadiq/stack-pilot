@@ -206,6 +206,15 @@ Four architectural fixes landed to handle production load:
                     persistent connections, no subprocess overhead
                     connection refused handled cleanly
 
+    Fix 7: Federated origin
+            Before: single origin node — registration SPOF
+            After:  3-origin federation, majority voting
+            Voting: propose -> collect votes -> broadcast commit
+            Result: 3/3 online, quorum=True
+                    climate.research.claims committed on all 3 origins
+                    any origin can propose
+                    no single point of failure
+
 ## The Analogy
 
     ARPANET was the protocol. The killer app was the Web.
