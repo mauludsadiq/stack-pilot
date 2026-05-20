@@ -211,9 +211,17 @@ Four architectural fixes landed to handle production load:
             After:  3-origin federation, majority voting
             Voting: propose -> collect votes -> broadcast commit
             Result: 3/3 online, quorum=True
-                    climate.research.claims committed on all 3 origins
-                    any origin can propose
-                    no single point of failure
+                    any origin can propose, no single point of failure
+
+    Fix 8: Horizontal sharding
+            Before: every node stores all claims
+            After:  claim spaces partitioned across nodes
+            API:    POST /shard/claim    declare ownership
+                    POST /shard/register propagate to peers
+                    GET  /shard/registry list all owners
+            Result: Bob publishes to research (Alice's shard)
+                    -> routed to Alice automatically
+                    -> Alice stores, gossips to subscribers
 
 ## The Analogy
 
