@@ -192,6 +192,13 @@ Four architectural fixes landed to handle production load:
                     /health -> count only
             Result: O(matching) not O(all) for targeted queries
 
+    Fix 5: Peer subscription filtering
+            Before: gossip broadcast to ALL peers — O(peers)
+            After:  on subscribe, node pushes subscriptions to peers
+                    on publish, sender filters before dispatch
+            Result: O(interested_peers) not O(all_peers)
+            Verified: economic claim delivered, research claim filtered
+
 ## The Analogy
 
     ARPANET was the protocol. The killer app was the Web.
